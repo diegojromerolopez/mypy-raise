@@ -1,6 +1,6 @@
 [project]
 name = "mypy-raise"
-version = "0.1.0"
+version = "0.1.1"
 description = "A mypy plugin to check for raised exceptions"
 readme = "README.md"
 authors = [{ name = "Diego J. Romero Lopez", email = "diegojromerolopez@example.com" }]
