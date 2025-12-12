@@ -9,7 +9,6 @@ from mypy.options import Options
 from mypy.plugin import Plugin
 
 from mypy_raise.checker import compute_exception_propagation, find_undeclared_exceptions
-from mypy_raise.colors import Colors
 from mypy_raise.stats import STATS
 from mypy_raise.stdlib_exceptions import get_stdlib_exceptions
 from mypy_raise.visitor import RaisingVisitor
@@ -176,7 +175,7 @@ class RaisingPlugin(Plugin):
             # Report at file level (line 1 approximate location)
             lineno = 1
 
-            msg = f"{file_path}:{lineno}: {Colors.error('error')}: "
+            msg = f"{file_path}:{lineno}: 'error': "
             msg += f"Function '{func_name}' missing @raising decorator (strict mode)\n"
             sys.stdout.write(msg)
             sys.stdout.flush()
@@ -211,13 +210,13 @@ class RaisingPlugin(Plugin):
         """Format enhanced error message with context and hints."""
         exc_list = ', '.join(f"'{exc}'" for exc in sorted(missing_exceptions))
 
-        msg = f"{file_path}:{lineno}: {Colors.error('error')}: "
+        msg = f"{file_path}:{lineno}: error: "
         msg += f"Function '{func_name}' may raise {exc_list} but these are not declared.\n"
 
         # Add hint
         exc_hint = ', '.join(sorted(missing_exceptions))
         hint_text = f'  💡 Hint: Add to decorator: @raising(exceptions=[{exc_hint}])'
-        msg += f'{Colors.hint(hint_text)}\n'
+        msg += f'{hint_text}\n'
 
         # Add source information
         if sources:
