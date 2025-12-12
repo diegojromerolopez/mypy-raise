@@ -307,8 +307,9 @@ This project was inspired by [mypy-pure](https://github.com/diegojromerolopez/my
 
 ## Related Projects
 
-- [mypy](https://github.com/python/mypy) - Optional static typing for Python
-- [mypy-pure](https://github.com/diegojromerolopez/mypy-pure) - Enforce function purity
+- [mypy](https://github.com/python/mypy) - Optional static typing for Python.
+- [mypy-pure](https://github.com/diegojromerolopez/mypy-pure) - Enforce function purity.
+- [mypy-plugins-examples](https://github.com/diegojromerolopez/mypy-plugins-examples) - A project that contains some examples for my mypy-pure and mypy-raise plugins.
 
 ---
 

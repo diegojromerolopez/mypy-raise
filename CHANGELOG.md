@@ -4,11 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## 0.1.1 (UNRELEASED)
+## 0.1.1 (2025-12-12)
 
 ### Fixes
 
 - Add **py.typed** to the project.
+- Minor fixes in the README.md.
+- Ignore .idea folder.
 
 ## 0.1.0 (2025-12-08)
 
