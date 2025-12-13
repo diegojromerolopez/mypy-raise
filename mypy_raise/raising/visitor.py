@@ -1,6 +1,6 @@
 import ast
 
-from mypy_raise.types import (
+from mypy_raise.raising.types import (
     CallGraph,
     ExceptionSet,
     ExplicitRaises,

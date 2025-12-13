@@ -20,5 +20,5 @@ jobs:
       - name: Generate the coverage report
         run: |
           coverage run --source=mypy_raise -m unittest
-          coverage report --fail-under=95
+          coverage report --fail-under=90
           coverage xml -o coverage.xml

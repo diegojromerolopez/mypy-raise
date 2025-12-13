@@ -56,6 +56,6 @@ exclude = [
 
 [tool.coverage.run]
 omit = [
-    "tests/resources/*",
+    "mypy_raise/tests/resources/*",
 ]
 
