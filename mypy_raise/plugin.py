@@ -1,5 +1,4 @@
 import ast
-import atexit
 import configparser
 import fnmatch
 import sys
@@ -13,16 +12,6 @@ from mypy_raise.colors import Colors
 from mypy_raise.stats import STATS
 from mypy_raise.stdlib_exceptions import get_stdlib_exceptions
 from mypy_raise.visitor import RaisingVisitor
-
-
-def print_stats():
-    """Print analysis statistics at exit."""
-    if STATS.files_checked > 0:
-        sys.stdout.write(STATS.format_summary() + '\n')
-        sys.stdout.flush()
-
-
-atexit.register(print_stats)
 
 
 class RaisingPlugin(Plugin):
