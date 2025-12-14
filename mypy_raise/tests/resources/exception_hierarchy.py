@@ -4,17 +4,17 @@ from mypy_raise import raising
 # Helper functions raising specific exceptions
 @raising(exceptions=[ValueError])
 def raises_value_error() -> None:
-    raise ValueError("Value error")
+    raise ValueError('Value error')
 
 
 @raising(exceptions=[FileNotFoundError])
 def raises_file_not_found() -> None:
-    raise FileNotFoundError("File not found")
+    raise FileNotFoundError('File not found')
 
 
 @raising(exceptions=[KeyError])
 def raises_key_error() -> None:
-    raise KeyError("Key error")
+    raise KeyError('Key error')
 
 
 # Test 1: Catching Exception (base of ValueError) - Should pass
